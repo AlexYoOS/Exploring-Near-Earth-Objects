@@ -1,10 +1,24 @@
+![](nasa-logo-web-rgb.png)
+
 # Explore Close Approaches of Near-Earth Objects
 
-In this project, you'll use Python - and the skills we've developed throughout this course - to search for and explore close approaches of near-Earth objects (NEOs), using data from NASA/JPL's Center for Near Earth Object Studies.
+In this project, I used intermediate/advanced Python  to search for and explore close approaches of near-Earth objects (NEOs), using data from NASA/JPL's Center for Near Earth Object Studies.
+
+## Intent
+
+The projects aims to demonstrates primarily the implemenation of advanced python features, with a focus on its Object Oriented Programming (OOP) Paradigm as a subcomponent of the language. The effectiveness of python as a coder-friendly language  derives from the authors ability to "Mix and Match" its underlying paradigm at free will:
+
+- Procedural Programming
+- Object Oriented Programming
+- Functional Programming
+- Imperative Programming 
+- Declarative Programming
+
+While notable modern languages, as well as most task specific scripting solutions focus on Functional Programming, every user eventually applies OOP at the very least in the form of using **methods of the standard library or third party libraries**, when a method is called from the Python standard library, it typically originates from a class that was written by someone. This approach provides a wide range of functionalities, and many of these functionalities are implemented as classes with methods. Hence to have advanced python skills allows to understand the source codes of these libraries for understanding, customized implementations, as well as collaborative efforts for open source projects. 
 
 ## Overview
 
-At a high-level, you'll create Python code that implements a command-line tool to inspect and query a dataset of NEOs and their close approaches to Earth.
+At a high-level, I'll create Python code that implements a command-line tool to inspect and query a dataset of NEOs and their close approaches to Earth.
 
 Concretely, you'll have to read data from both a CSV file and a JSON file, convert that data into structured Python objects, perform filtering operations on the data, limit the size of the result set, and write the results to a file in a structured format, such as CSV or JSON.
 
