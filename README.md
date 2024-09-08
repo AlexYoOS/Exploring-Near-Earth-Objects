@@ -20,9 +20,9 @@ While notable modern languages, as well as most task specific scripting solution
 
 At a high-level, I'll create Python code that implements a command-line tool to inspect and query a dataset of NEOs and their close approaches to Earth.
 
-Concretely, you'll have to read data from both a CSV file and a JSON file, convert that data into structured Python objects, perform filtering operations on the data, limit the size of the result set, and write the results to a file in a structured format, such as CSV or JSON.
+Concretely, I'll read the data from both a CSV file and a JSON file, converted that data into structured Python objects, perform filtering operations on the data, limit the size of the result set, and write the results to a file in a structured format, such as CSV or JSON.
 
-When complete, you'll be able to inspect the properties of the near-Earth objects in the data set and query the data set of close approaches to Earth using any combination of the following filters:
+When complete, I'll be able to inspect the properties of the near-Earth objects in the data set and query the data set of close approaches to Earth using any combination of the following filters:
 
 - Occurs on a given date.
 - Occurs on or after a given start date.
@@ -34,36 +34,35 @@ When complete, you'll be able to inspect the properties of the near-Earth object
 
 ### Learning Objectives
 
-By completing this project, you'll have demonstrated an ability to:
+By completing this project, I demonstrated an ability to:
 
 - Represent structured data in Python.
 - Extract data from structured files into Python.
 - Transform the data within Python according to some desired behavior.
 - Save the results in a structured way to a file.
 
-Along the way, you'll have to be able to:
+Along the way, I was able to:
 
 - Write Python functions to transform data and perform algorithms.
 - Design Python classes to encapsulate useful data types.
 - Provide interface abstractions for complex implementations.
 
-It's normal to encounter bugs along the way, so in all likelihood, you'll also gain practice with valuable debugging skills, whether interpreting stack traces, chasing down system errors, handling and raising appropriate errors, walking through code with `pdb`, checking preconditions with `assert`, or simply displaying internal state with `print`.
 
 ## Understanding the Near-Earth Object Close Approach Datasets
 
-This project contains two important data sets, and our first step will be to explore and understand the data containing within these structured files.
+This project contains two important data sets, and the first step will be to explore and understand the data containing within these structured files.
 
 One dataset (`neos.csv`) contains information about semantic, physical, orbital, and model parameters for certain small bodies (asteroids and comets, mostly) in our solar system. The other dataset (`cad.json`) contains information about NEO close approaches - moments in time when the orbit of an astronomical body brings it close to Earth. NASA helpfully provides a [glossary](https://cneos.jpl.nasa.gov/glossary/) to define any unfamiliar terms you might encounter.
 
-Importantly, these datasets come directly from NASA - we haven't dressed them up for you at all.
+Importantly, these datasets come directly from NASA - the data is not dressed up at all.
 
 ### Small-Bodies Dataset
 
 NASA's Jet Propulsion Laboratory (JPL) provides [a web interface](https://ssd.jpl.nasa.gov/sbdb_query.cgi) to their database of "small bodies" - mostly asteroids and comets - in the solar system. A subset of these small bodies are near-Earth objects (NEOs): "comets and asteroids that have been nudged by the gravitational attraction of nearby planets into orbits that allow them to enter the Earth's neighborhood." [1]
 
-From this dataset, you can answer questions such as "what is the diameter of the Halley's Comet?" or "is the near-Earth object named 'Eros' potentially hazardous?".
+From this dataset, we can answer questions such as "what is the diameter of the Halley's Comet?" or "is the near-Earth object named 'Eros' potentially hazardous?".
 
-NASA's web service lets you download their data on near-Earth objects in a CSV format. For this project, the data set we've provided (`neos.csv`) comes directly from a query in which we limited the "Object Group" to NEOs and in which we selected _every_ output field. That's a _lot_ of columns (75, to be exact)!
+NASA's web service lets us download their data on near-Earth objects in a CSV format. For this project, the data set thats provided (`neos.csv`) comes directly from a query in which we limited the "Object Group" to NEOs and in which we selected _every_ output field. That's a _lot_ of columns (75, to be exact)!
 
 Let's take an initial look at the first three rows of `neos.csv`:
 
@@ -96,7 +95,7 @@ If you'd like to explore individual NEOs in more detail (and perhaps interpret a
 
 NASA's Center for Near-Earth Object Studies (CNEOS) also provides data about close approaches of NEOs to Earth. A close approach occurs when an NEO's orbit path brings it near Earth - although, "near" in astronomical terms can be quite far in human-scale units, such as kilometers. Instead of kilometers, astronomical distances within the solar system are often measured with the astronomical unit (au) - the mean distance between the Earth and the sun - although sometimes you'll see distances measured with the lunar distance (ld) - the mean distance between the Earth and the moon - or even plain old kilometers.
 
-From this dataset, you can answer questions such as "On which date(s) does Halley's Comet pass near to Earth?" or "How fast does Eros pass by Earth, on average?"
+From this dataset, we can answer questions such as "On which date(s) does Halley's Comet pass near to Earth?" or "How fast does Eros pass by Earth, on average?"
 
 The data is JSON-formatted, and we've downloaded it from NASA's public API. A description of the API, as well as details about the query parameters and the scheme of the returned data, can be found [here](https://ssd-api.jpl.nasa.gov/doc/cad.html). Concretely, we asked NASA for this data by querying the API at `https://ssd-api.jpl.nasa.gov/cad.api?date-min=1900-01-01&date-max=2100-01-01&dist-max=1`. In other words, our data set contains all currently known close approaches that have happened or will happen in the 20th and 21st centuries! Additionally, NASA provides the data is chronological order.
 
