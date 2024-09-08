@@ -6,13 +6,13 @@ In this project, I used intermediate/advanced Python  to search for and explore 
 
 ## Intent
 
-The projects aims to demonstrates primarily the implemenation of advanced python features, with a focus on its Object Oriented Programming (OOP) Paradigm as a subcomponent of the language. The effectiveness of python as a coder-friendly language  derives from the authors ability to "Mix and Match" its underlying paradigm at free will:
+The projects aims to demonstrates primarily the implementation of advanced python features, with a focus on its Object Oriented Programming (OOP) Paradigm as a subcomponent of the language. The effectiveness of python as a coder-friendly language  derives from the authors ability to "Mix and Match" its underlying paradigm at free will:
 
-- Procedural Programming
-- Object Oriented Programming
-- Functional Programming
-- Imperative Programming 
-- Declarative Programming
+**- Procedural Programming**
+**- Object Oriented Programming**
+**- Functional Programming**
+**- Imperative Programming** 
+**- Declarative Programming**
 
 While notable modern languages, as well as most task specific scripting solutions focus on Functional Programming, every user eventually applies OOP at the very least in the form of using **methods of the standard library or third party libraries**, when a method is called from the Python standard library, it typically originates from a class that was written by someone. This approach provides a wide range of functionalities, and many of these functionalities are implemented as classes with methods. Hence to have advanced python skills allows to understand the source codes of these libraries for understanding, customized implementations, as well as collaborative efforts for open source projects. 
 
